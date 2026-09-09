@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+  name="description"
+  content="Defesa dos Direitos das Mulheres - Aline Teixeira."
+>
+
+<title>
+  Defesa dos Direitos das Mulheres | Aline Teixeira
+</title>
+
+
+<style>
+
+/* =========================
+   CORES
+========================= */
+
+:root{
+
+  --roxo:#35106d;
+
+  --roxo2:#210943;
+
+  --amarelo:#ffd400;
+
+  --amarelo2:#ffbe00;
+
+  --claro:#fffdf3;
+
+  --texto:#241735;
+
+  --branco:#ffffff;
+
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+*{
+
+  box-sizing:border-box;
+
+  margin:0;
+
+  padding:0;
+
+}
+
+
+html{
+
+  scroll-behavior:smooth;
+
+}
+
+
+body{
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background:var(--claro);
+
+  color:var(--texto);
+
+  line-height:1.7;
+
+}
+
+
+a{
+
+  text-decoration:none;
+
+  color:inherit;
+
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.topo{
+
+  background:var(--roxo);
+
+  padding:18px 20px;
+
+}
+
+
+.topo-inner{
+
+  width:min(1100px,100%);
+
+  margin:auto;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+}
+
+
+.logo{
+
+  color:var(--amarelo);
+
+  font-size:1.25rem;
+
+  font-weight:900;
+
+  text-transform:uppercase;
+
+}
+
+
+.btn-voltar{
+
+  background:var(--amarelo);
+
+  color:var(--roxo);
+
+  padding:10px 20px;
+
+  border-radius:999px;
+
+  font-weight:800;
+
+  transition:.2s;
+
+}
+
+
+.btn-voltar:hover{
+
+  transform:translateY(-2px);
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+  background:
+
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255,255,255,.18),
+      transparent 28%
+    ),
+
+    linear-gradient(
+      135deg,
+      #ffd900 0%,
+      #ffca00 50%,
+      #f5ae00 100%
+    );
+
+  padding:
+    90px 20px
+    100px;
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+
+.hero::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:70vw;
+
+  height:180px;
+
+  background:var(--roxo);
+
+  left:-10vw;
+
+  bottom:-110px;
+
+  transform:rotate(-7deg);
+
+  border-radius:50%;
+
+}
+
+
+.container{
+
+  width:min(1050px,100%);
+
+  margin:auto;
+
+}
+
+
+.hero-content{
+
+  position:relative;
+
+  z-index:2;
+
+  text-align:center;
+
+}
+
+
+.hero h1{
+
+  color:var(--roxo);
+
+  font-size:
+
+    clamp(
+      2.4rem,
+      6vw,
+      5rem
+    );
+
+  line-height:1.05;
+
+  text-transform:uppercase;
+
+  max-width:1000px;
+
+  margin:auto;
+
+}
+
+
+.hero-subtitle{
+
+  max-width:780px;
+
+  margin:25px auto 0;
+
+  font-size:1.15rem;
+
+  font-weight:600;
+
+}
+
+
+/* =========================
+   DESTAQUE
+========================= */
+
+.destaque{
+
+  padding:75px 20px;
+
+  background:var(--claro);
+
+}
+
+
+.titulo{
+
+  color:var(--roxo);
+
+  text-align:center;
+
+  font-size:
+
+    clamp(
+      2rem,
+      5vw,
+      3.3rem
+    );
+
+  line-height:1.1;
+
+  text-transform:uppercase;
+
+  margin-bottom:15px;
+
+}
+
+
+.subtitulo{
+
+  max-width:760px;
+
+  margin:
+    0 auto 45px;
+
+  text-align:center;
+
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:20px;
+
+}
+
+
+.card{
+
+  background:var(--branco);
+
+  padding:30px 22px;
+
+  border-radius:22px;
+
+  border-top:
+    6px solid
+    var(--amarelo2);
+
+  box-shadow:
+    0 12px 35px
+    rgba(53,16,109,.10);
+
+  transition:.2s;
+
+}
+
+
+.card:hover{
+
+  transform:translateY(-4px);
+
+}
+
+
+.icone{
+
+  width:60px;
+
+  height:60px;
+
+  border-radius:50%;
+
+  background:var(--roxo);
+
+  color:#fff;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:28px;
+
+  margin-bottom:18px;
+
+}
+
+
+.card h2{
+
+  color:var(--roxo);
+
+  font-size:1.25rem;
+
+  margin-bottom:10px;
+
+}
+
+
+.card p{
+
+  font-size:.98rem;
+
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre{
+
+  background:var(--roxo);
+
+  color:#fff;
+
+  padding:85px 20px;
+
+}
+
+
+.sobre-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:50px;
+
+  align-items:center;
+
+}
+
+
+.sobre .titulo{
+
+  color:var(--amarelo);
+
+  text-align:left;
+
+}
+
+
+.sobre-texto p{
+
+  margin-bottom:18px;
+
+}
+
+
+.caixa{
+
+  background:
+    rgba(255,255,255,.10);
+
+  border:
+    1px solid
+    rgba(255,255,255,.18);
+
+  border-radius:24px;
+
+  padding:32px;
+
+}
+
+
+.caixa h2{
+
+  color:var(--amarelo);
+
+  margin-bottom:12px;
+
+  font-size:1.5rem;
+
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.informacoes{
+
+  padding:80px 20px;
+
+  background:
+
+    linear-gradient(
+      180deg,
+      #fffdf3,
+      #fff3a8
+    );
+
+}
+
+
+.informacoes-box{
+
+  max-width:850px;
+
+  margin:auto;
+
+  text-align:center;
+
+}
+
+
+.informacoes-box p{
+
+  margin-bottom:18px;
+
+}
+
+
+/* =========================
+   PRINCÍPIOS
+========================= */
+
+.principios{
+
+  padding:80px 20px;
+
+  background:#fff;
+
+}
+
+
+.lista{
+
+  max-width:800px;
+
+  margin:40px auto 0;
+
+  display:grid;
+
+  gap:15px;
+
+}
+
+
+.item{
+
+  display:flex;
+
+  gap:15px;
+
+  align-items:flex-start;
+
+  background:var(--claro);
+
+  padding:20px;
+
+  border-radius:16px;
+
+  border-left:
+    5px solid
+    var(--amarelo2);
+
+}
+
+
+.item strong{
+
+  color:var(--roxo);
+
+  display:block;
+
+  margin-bottom:3px;
+
+}
+
+
+/* =========================
+   BOTÃO FINAL
+========================= */
+
+.final{
+
+  background:var(--roxo2);
+
+  color:#fff;
+
+  text-align:center;
+
+  padding:60px 20px;
+
+}
+
+
+.final h2{
+
+  color:var(--amarelo);
+
+  font-size:
+
+    clamp(
+      1.8rem,
+      4vw,
+      2.8rem
+    );
+
+  margin-bottom:15px;
+
+}
+
+
+.final p{
+
+  max-width:700px;
+
+  margin:auto;
+
+}
+
+
+.btn-principal{
+
+  display:inline-block;
+
+  margin-top:25px;
+
+  background:var(--amarelo);
+
+  color:var(--roxo);
+
+  padding:13px 25px;
+
+  border-radius:999px;
+
+  font-weight:900;
+
+  transition:.2s;
+
+}
+
+
+.btn-principal:hover{
+
+  transform:translateY(-2px);
+
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer{
+
+  background:#16062d;
+
+  color:#fff;
+
+  text-align:center;
+
+  padding:28px 20px;
+
+  font-size:.9rem;
+
+}
+
+
+footer p + p{
+
+  margin-top:6px;
+
+  opacity:.7;
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:850px){
+
+  .cards{
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+
+  .sobre-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width:560px){
+
+  .topo-inner{
+
+    flex-direction:column;
+
+  }
+
+
+  .hero{
+
+    padding:
+      65px 16px
+      80px;
+
+  }
+
+
+  .cards{
+
+    grid-template-columns:1fr;
+
+  }
+
+
+  .destaque,
+  .sobre,
+  .informacoes,
+  .principios{
+
+    padding:
+      60px 16px;
+
+  }
+
+
+  .btn-voltar{
+
+    width:100%;
+
+    text-align:center;
+
+  }
+
+
+  .hero-subtitle{
+
+    font-size:1rem;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     TOPO
+========================= -->
+
+<header class="topo">
+
+  <div class="topo-inner">
+
+
+    <div class="logo">
+
+      Aline Teixeira
+
+    </div>
+
+
+    </a>
+
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+
+      <h1>
+
+        Defesa dos Direitos
+        das Mulheres
+
+      </h1>
+
+
+      <p class="hero-subtitle">
+
+        Um espaço dedicado à informação,
+        proteção, prevenção da violência,
+        acolhimento e garantia de direitos
+        das mulheres.
+
+      </p>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     PRINCIPAL
+========================= -->
+
+<section class="destaque">
+
+  <div class="container">
+
+
+    <h2 class="titulo">
+
+      Defesa dos Direitos
+      das Mulheres
+
+    </h2>
+
+
+    <p class="subtitulo">
+
+      A defesa dos direitos das mulheres
+      envolve políticas públicas que ampliem
+      a proteção, o atendimento humanizado,
+      a autonomia e as condições para que
+      mulheres possam viver com segurança,
+      liberdade, respeito e igualdade de
+      oportunidades.
+
+    </p>
+
+
+
+    <div class="cards">
+
+
+      <!-- PROTEÇÃO -->
+
+      <article class="card">
+
+        <div class="icone">
+
+          🛡
+
+        </div>
+
+
+        <h2>
+
+          Proteção
+
+        </h2>
+
+
+        <p>
+
+          Fortalecimento de políticas públicas
+          voltadas à proteção das mulheres,
+          especialmente em situações de
+          vulnerabilidade e violência.
+
+        </p>
+
+      </article>
+
+
+
+      <!-- PREVENÇÃO -->
+
+      <article class="card">
+
+        <div class="icone">
+
+          ⚠
+
+        </div>
+
+
+        <h2>
+
+          Prevenção
+
+        </h2>
+
+
+        <p>
+
+          A prevenção é fundamental para
+          enfrentar a violência e ampliar a
+          informação sobre segurança,
+          direitos e serviços de proteção.
+
+        </p>
+
+      </article>
+
+
+
+      <!-- ACOLHIMENTO -->
+
+      <article class="card">
+
+        <div class="icone">
+
+          ♡
+
+        </div>
+
+
+        <h2>
+
+          Acolhimento
+
+        </h2>
+
+
+        <p>
+
+          Valorização de um atendimento
+          humanizado, com orientação,
+          acolhimento e encaminhamento
+          adequado para quem precisa.
+
+        </p>
+
+      </article>
+
+
+
+      <!-- AUTONOMIA -->
+
+      <article class="card">
+
+        <div class="icone">
+
+          ★
+
+        </div>
+
+
+        <h2>
+
+          Autonomia
+
+        </h2>
+
+
+        <p>
+
+          Incentivo à autonomia e à criação
+          de condições para que mulheres
+          tenham mais liberdade, oportunidades
+          e igualdade.
+
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+
+<section class="sobre">
+
+  <div class="container">
+
+
+    <div class="sobre-grid">
+
+
+      <div class="sobre-texto">
+
+
+        <h2 class="titulo">
+
+          Sobre
+
+        </h2>
+
+
+        <p>
+
+          Esta página reúne informações
+          específicas sobre a defesa dos
+          direitos das mulheres.
+
+        </p>
+
+
+        <p>
+
+          A proposta apresentada pela
+          campanha destaca a necessidade
+          de fortalecer políticas públicas
+          que ampliem a proteção das mulheres,
+          ofereçam atendimento humanizado
+          e incentivem sua autonomia.
+
+        </p>
+
+
+        <p>
+
+          O objetivo deste espaço é facilitar
+          o acesso às informações e apresentar
+          os temas de forma clara e organizada.
+
+        </p>
+
+
+      </div>
+
+
+
+      <div class="caixa">
+
+
+        <h2>
+
+          Informações e transparência
+
+        </h2>
+
+
+        <p>
+
+          As informações desta página devem
+          ser complementadas e atualizadas
+          sempre que houver novos dados,
+          propostas, projetos ou informações
+          oficiais.
+
+        </p>
+
+
+        <p style="margin-top:15px;">
+
+          Para manter a transparência,
+          recomenda-se utilizar fontes oficiais
+          e informações públicas verificáveis.
+
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     PRINCÍPIOS
+========================= -->
+
+<section class="principios">
+
+  <div class="container">
+
+
+    <h2 class="titulo">
+
+      Compromissos
+
+    </h2>
+
+
+    <p class="subtitulo">
+
+      Entre os temas apresentados publicamente
+      estão a proteção, segurança, atendimento
+      e autonomia das mulheres.
+
+    </p>
+
+
+    <div class="lista">
+
+
+      <div class="item">
+
+        <div>
+
+          <strong>
+
+            Segurança e proteção
+
+          </strong>
+
+          <p>
+
+            Fortalecer ações e políticas
+            destinadas à proteção das mulheres
+            e ao enfrentamento da violência.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="item">
+
+        <div>
+
+          <strong>
+
+            Atendimento humanizado
+
+          </strong>
+
+          <p>
+
+            Ampliar condições para que mulheres
+            encontrem acolhimento e atendimento
+            adequado quando precisarem.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="item">
+
+        <div>
+
+          <strong>
+
+            Autonomia feminina
+
+          </strong>
+
+          <p>
+
+            Incentivar condições que contribuam
+            para a autonomia econômica e social
+            das mulheres.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="item">
+
+        <div>
+
+          <strong>
+
+            Informação e direitos
+
+          </strong>
+
+          <p>
+
+            Facilitar o acesso a informações
+            sobre direitos, proteção e serviços
+            públicos disponíveis.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="final">
+
+  <div class="container">
+
+
+    <h2>
+
+      Informação também é proteção.
+
+    </h2>
+
+
+    <p>
+
+      Conheça os demais temas e informações
+      disponíveis na página principal.
+
+    </p>
+
+
+    <a
+      class="btn-principal"
+      href="index.html"
+    >
+
+      ← Voltar para a página principal
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer>
+
+
+  <p>
+
+    © 2026 Aline Teixeira —
+    Página informativa.
+
+  </p>
+
+
+  <p>
+
+    Conteúdo sujeito à atualização
+    conforme informações oficiais.
+
+  </p>
+
+
+</footer>
+
+
+</body>
+
+</html>

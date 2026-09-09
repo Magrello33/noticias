@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Página informativa de apresentação e temas de atuação de Aline Teixeira.">
+
+<title>Aline Teixeira | Deputada Federal</title>
+
+<style>
+
+:root{
+  --roxo:#35106d;
+  --amarelo:#ffd400;
+  --amarelo2:#ffbe00;
+  --claro:#fffdf3;
+  --texto:#241735;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--claro);
+  color:var(--texto);
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255,255,255,.16),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #ffd900 0%,
+      #ffca00 48%,
+      #f5ae00 100%
+    );
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:30px 20px 80px;
+
+  overflow:hidden;
+
+  position:relative;
+}
+
+
+.hero::after{
+  content:"";
+
+  position:absolute;
+
+  width:75vw;
+  height:220px;
+
+  background:var(--roxo);
+
+  left:-8vw;
+  bottom:-125px;
+
+  transform:rotate(-8deg);
+
+  border-radius:50%;
+}
+
+
+.hero-inner{
+  width:min(1120px,100%);
+
+  display:grid;
+
+  grid-template-columns:1fr 430px;
+
+  gap:45px;
+
+  align-items:center;
+
+  position:relative;
+
+  z-index:2;
+}
+
+
+/* TEXTO HERO */
+
+.kicker{
+  color:var(--roxo);
+
+  font-weight:900;
+
+  font-size:clamp(
+    2.4rem,
+    6vw,
+    5.5rem
+  );
+
+  line-height:.95;
+
+  text-transform:uppercase;
+
+  letter-spacing:-2px;
+}
+
+
+.script{
+  display:block;
+
+  font-family:cursive;
+
+  font-size:clamp(
+    1.8rem,
+    4vw,
+    3.4rem
+  );
+
+  margin:8px 0;
+}
+
+
+.hero h1{
+  color:white;
+
+  background:var(--roxo);
+
+  display:inline-block;
+
+  padding:5px 18px;
+
+  font-size:clamp(
+    2.2rem,
+    5vw,
+    4.5rem
+  );
+
+  line-height:1;
+
+  margin-top:18px;
+
+  text-transform:uppercase;
+
+  transform:skew(-4deg);
+}
+
+
+.hero p{
+  max-width:600px;
+
+  margin-top:20px;
+
+  font-size:1.08rem;
+
+  font-weight:600;
+}
+
+
+/* FOTO */
+
+.photo{
+  width:100%;
+
+  max-width:430px;
+
+  height:auto;
+
+  border-radius:28px;
+
+  display:block;
+
+  margin:auto;
+
+  box-shadow:
+    0 25px 60px
+    rgba(53,16,109,.30);
+
+  border:
+    8px solid
+    rgba(255,255,255,.65);
+}
+
+
+/* BOTÕES */
+
+.btns{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+
+  margin-top:25px;
+}
+
+
+.btn{
+  display:inline-block;
+
+  padding:13px 21px;
+
+  border-radius:999px;
+
+  font-weight:800;
+
+  transition:.2s;
+
+  text-align:center;
+}
+
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+
+.btn-roxo{
+  background:var(--roxo);
+
+  color:#fff;
+}
+
+
+.btn-claro{
+  background:#fff;
+
+  color:var(--roxo);
+}
+
+
+/* SEÇÕES */
+
+.section{
+  padding:80px 20px;
+}
+
+
+.container{
+  width:min(1050px,100%);
+
+  margin:auto;
+}
+
+
+.section-title{
+  text-align:center;
+
+  color:var(--roxo);
+
+  font-size:clamp(
+    2rem,
+    5vw,
+    3.2rem
+  );
+
+  margin-bottom:12px;
+
+  text-transform:uppercase;
+}
+
+
+.section-sub{
+  text-align:center;
+
+  max-width:700px;
+
+  margin:0 auto 42px;
+}
+
+
+/* CARDS */
+
+.cards{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:18px;
+}
+
+
+.card{
+  background:#fff;
+
+  border-radius:22px;
+
+  padding:28px 20px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(53,16,109,.10);
+
+  border-top:
+    6px solid
+    var(--amarelo2);
+}
+
+
+.icon{
+  width:58px;
+
+  height:58px;
+
+  border-radius:50%;
+
+  background:var(--roxo);
+
+  color:#fff;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:27px;
+
+  margin-bottom:16px;
+}
+
+
+.card h3{
+  color:var(--roxo);
+
+  margin-bottom:8px;
+
+  font-size:1.2rem;
+}
+
+
+/* SOBRE */
+
+.about{
+  background:var(--roxo);
+
+  color:#fff;
+}
+
+
+.about-grid{
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:45px;
+
+  align-items:center;
+}
+
+
+.about h2{
+  color:var(--amarelo);
+}
+
+
+.about-box{
+  background:
+    rgba(255,255,255,.10);
+
+  padding:28px;
+
+  border-radius:22px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.15);
+}
+
+
+/* CONTATO */
+
+.contact{
+  text-align:center;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffdf3,
+      #fff3a8
+    );
+}
+
+
+.social{
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  margin-top:20px;
+
+  padding:13px 24px;
+
+  border-radius:999px;
+
+  background:var(--roxo);
+
+  color:#fff;
+
+  font-weight:800;
+}
+
+
+/* RODAPÉ */
+
+footer{
+  background:#210943;
+
+  color:#fff;
+
+  text-align:center;
+
+  padding:28px 20px;
+
+  font-size:.9rem;
+}
+
+
+/* TABLET */
+
+@media(max-width:850px){
+
+  .hero-inner{
+    grid-template-columns:1fr;
+
+    text-align:center;
+  }
+
+
+  .hero p{
+    margin-left:auto;
+
+    margin-right:auto;
+  }
+
+
+  .photo{
+    max-width:360px;
+  }
+
+
+  .cards{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+
+  .btns{
+    justify-content:center;
+  }
+
+}
+
+
+/* CELULAR */
+
+@media(max-width:520px){
+
+  .hero{
+    padding:
+      25px 15px 70px;
+  }
+
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+
+  .section{
+    padding:60px 16px;
+  }
+
+
+  .hero h1{
+    font-size:2.2rem;
+  }
+
+
+  .btn{
+    width:100%;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     INÍCIO
+========================= -->
+
+<header
+  class="hero"
+  id="inicio"
+>
+
+  <div class="hero-inner">
+
+
+    <div>
+
+      <div class="kicker">
+        Cuidar
+      </div>
+
+
+      <span class="script">
+        de pessoas é
+      </span>
+
+
+      <div class="kicker">
+        transformar vidas!
+      </div>
+
+
+      <h1>
+        Aline Teixeira
+      </h1>
+
+
+      <p>
+        Página informativa com apresentação,
+        temas de atuação e canais públicos
+        relacionados ao trabalho de Aline Teixeira.
+      </p>
+
+
+      <div class="btns">
+
+
+        <a
+          class="btn btn-roxo"
+          href="#temas"
+        >
+          Conheça os temas
+        </a>
+
+
+        <!-- NOVO BOTÃO -->
+
+        <a
+          class="btn btn-roxo"
+          href="defesa-mulheres.html"
+        >
+          Defesa dos Direitos das Mulheres
+        </a>
+
+
+        <a
+          class="btn btn-claro"
+          href="#contato"
+        >
+          Redes sociais
+        </a>
+
+
+      </div>
+
+    </div>
+
+
+    <div>
+
+      <!--
+        COLOQUE A IMAGEM
+        "aline(1).png"
+        NA MESMA PASTA DESTE HTML
+      -->
+
+      <img
+        class="photo"
+        src="at.png"
+        alt="Material de apresentação de Aline Teixeira"
+      >
+
+    </div>
+
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================
+     TEMAS
+========================= -->
+
+<section
+  class="section"
+  id="temas"
+>
+
+  <div class="container">
+
+
+    <h2 class="section-title">
+      Temas de atuação
+    </h2>
+
+
+    <p class="section-sub">
+
+      Informações organizadas a partir
+      dos temas destacados no material
+      de apresentação.
+
+    </p>
+
+
+    <div class="cards">
+
+
+      <article class="card">
+
+        <div class="icon">
+          ♀
+        </div>
+
+        <h3>
+          Proteção às mulheres
+        </h3>
+
+        <p>
+          Espaço dedicado a informações
+          e iniciativas relacionadas à
+          proteção e aos direitos das mulheres.
+        </p>
+
+      </article>
+
+
+
+      <article class="card">
+
+        <div class="icon">
+          🐾
+        </div>
+
+        <h3>
+          Causa animal
+        </h3>
+
+        <p>
+          Informações sobre ações e
+          assuntos relacionados à proteção
+          e ao bem-estar animal.
+        </p>
+
+      </article>
+
+
+
+      <article class="card">
+
+        <div class="icon">
+          ♡
+        </div>
+
+        <h3>
+          Saúde mental
+        </h3>
+
+        <p>
+          Conteúdo sobre atenção,
+          cuidado e iniciativas relacionadas
+          à saúde mental.
+        </p>
+
+      </article>
+
+
+
+      <article class="card">
+
+        <div class="icon">
+          👨‍👩‍👧
+        </div>
+
+        <h3>
+          Famílias e inclusão
+        </h3>
+
+        <p>
+          Área para apresentar projetos
+          e informações voltados às famílias
+          e à inclusão.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+
+<section class="section about">
+
+  <div class="container about-grid">
+
+
+    <div>
+
+      <h2
+        class="section-title"
+        style="
+          text-align:left;
+          color:var(--amarelo);
+        "
+      >
+        Sobre
+      </h2>
+
+
+      <p>
+
+        Aline Teixeira atua na defesa dos direitos das mulheres, buscando fortalecer políticas públicas de proteção, acolhimento e autonomia. Este espaço apresenta informações sobre sua trajetória, atuação, propostas e iniciativas, de forma clara e transparente.
+      </p>
+
+    </div>
+
+
+
+    <div class="about-box">
+
+
+      <h3
+        style="
+          color:var(--amarelo);
+          margin-bottom:10px;
+        "
+      >
+        Informação e transparência
+      </h3>
+
+
+      <p>
+
+        Este espaço reúne informações sobre a trajetória, atuação e compromissos de Aline Teixeira. Aqui você poderá acompanhar propostas, projetos, iniciativas e ações voltadas à defesa dos direitos das mulheres, à proteção social, à saúde mental, à causa animal e ao fortalecimento das famílias.
+      </p>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTATO
+========================= -->
+
+<section
+  class="section contact"
+  id="contato"
+>
+
+  <div class="container">
+
+
+    <h2 class="section-title">
+      Contato e redes
+    </h2>
+
+
+    <p>
+
+      Conheça Mais, Sobre o Meu Trabalho
+      e o Meu Objetivo
+
+    </p>
+    
+    <a
+          class="btn btn-roxo"
+          href="defesa-mulheres.html"
+        >
+          Defesa dos Direitos das Mulheres
+        </a>
+
+
+    <a
+      class="social"
+      href="https://instagram.com/alinetexeira.oficial"
+      target="_blank"
+      rel="noopener"
+    >
+
+      Instagram:
+      alinetexeira.oficial
+
+    </a>
+    
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer>
+
+  <p>
+    © 2026 Aline Teixeira —
+    Página informativa.
+  </p>
+
+
+  <p
+    style="
+      margin-top:6px;
+      opacity:.75;
+    "
+  >
+
+    Conteúdo sujeito à atualização
+    conforme informações oficiais.
+
+  </p>
+
+</footer>
+
+
+</body>
+
+</html>
