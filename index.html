@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Aline & Rogério</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #34454f;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       CORES
+    ========================= */
+
+    :root {
+      --azul: #24566f;
+      --azul-suave: #eaf4f7;
+      --azul-claro: #f4f9fa;
+      --amarelo: #ffd21c;
+      --amarelo-hover: #ffdf4d;
+      --texto: #34454f;
+      --cinza: #687983;
+      --branco: #ffffff;
+      --borda: #e1ebee;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      background: #ffffff;
+      color: var(--azul);
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--borda);
+      box-shadow: 0 3px 14px rgba(36, 86, 111, 0.08);
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    .logo span {
+      color: #e6ad00;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+    }
+
+    nav a {
+      color: var(--azul);
+      text-decoration: none;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: #d5a000;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background:
+        linear-gradient(
+          180deg,
+          #f8fcfd 0%,
+          #eef7f9 100%
+        );
+      color: var(--azul);
+      padding: 65px 7%;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 50px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: var(--azul);
+    }
+
+    .hero-text h1 span {
+      color: #e6ad00;
+    }
+
+    .hero-text p {
+      font-size: 19px;
+      max-width: 570px;
+      margin-bottom: 28px;
+      color: var(--texto);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: .3s;
+      text-align: center;
+    }
+
+    .btn-yellow {
+      background: var(--amarelo);
+      color: #34454f;
+    }
+
+    .btn-yellow:hover {
+      background: var(--amarelo-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-blue {
+      background: var(--azul);
+      color: #ffffff;
+    }
+
+    .btn-blue:hover {
+      background: #2f6884;
+      transform: translateY(-2px);
+    }
+
+    .btn-white {
+      background: #ffffff;
+      color: var(--azul);
+      border: 1px solid #d7e5e9;
+    }
+
+    .btn-white:hover {
+      background: #f4f9fa;
+      transform: translateY(-2px);
+    }
+
+    .hero-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .hero-images img {
+      width: 100%;
+      height: 420px;
+      object-fit: contain;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 7px;
+      box-shadow: 0 8px 24px rgba(36, 86, 111, .12);
+    }
+
+    /* =========================
+       FAIXA
+    ========================= */
+
+    .strip {
+      background: var(--amarelo);
+      color: #34454f;
+      text-align: center;
+      padding: 14px 20px;
+      font-weight: 800;
+      font-size: 17px;
+    }
+
+    /* =========================
+       SEÇÕES
+    ========================= */
+
+    section {
+      padding: 65px 7%;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      color: var(--azul);
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: var(--cinza);
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* =========================
+       VIDEO
+    ========================= */
+
+    .video-section {
+      background: var(--azul-claro);
+    }
+
+    .video-box {
+      max-width: 950px;
+      margin: auto;
+      background: #ffffff;
+      padding: 10px;
+      border-radius: 16px;
+      box-shadow: 0 7px 25px rgba(36, 86, 111, .10);
+      border: 1px solid var(--borda);
+    }
+
+    video {
+      width: 100%;
+      height: 420px;
+      display: block;
+      object-fit: contain;
+      background: #edf4f6;
+      border-radius: 10px;
+    }
+
+    /* =========================
+       PERFIS
+    ========================= */
+
+    .profiles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .profile-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 5px 22px rgba(36, 86, 111, .09);
+      border: 1px solid var(--borda);
+      border-top: 5px solid var(--amarelo);
+    }
+
+    .profile-card h3 {
+      color: var(--azul);
+      font-size: 27px;
+      margin-bottom: 7px;
+    }
+
+    .profile-card h4 {
+      color: #c39500;
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    .profile-card p {
+      margin-bottom: 18px;
+    }
+
+    .topics {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    .topics li {
+      padding: 9px 0 9px 28px;
+      position: relative;
+      border-bottom: 1px solid #edf2f3;
+    }
+
+    .topics li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #d5a000;
+      font-weight: bold;
+    }
+
+    .closing {
+      margin-top: 20px;
+      font-weight: 700;
+      color: var(--azul);
+    }
+
+    /* =========================
+       GALERIA
+    ========================= */
+
+    .gallery-section {
+      background: #ffffff;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .gallery-card {
+      background: var(--azul-claro);
+      padding: 12px;
+      border-radius: 16px;
+      border: 1px solid var(--borda);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 420px;
+      object-fit: contain;
+      display: block;
+      background: #ffffff;
+      border-radius: 10px;
+    }
+
+    /* =========================
+       CANAIS
+    ========================= */
+
+    .channels-section {
+      background: var(--azul-claro);
+    }
+
+    .channels {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .channel-card {
+      background: #ffffff;
+      padding: 30px 22px;
+      text-align: center;
+      border-radius: 16px;
+      box-shadow: 0 5px 18px rgba(36, 86, 111, .09);
+      border: 1px solid var(--borda);
+    }
+
+    .channel-card h3 {
+      color: var(--azul);
+      margin-bottom: 10px;
+      font-size: 23px;
+    }
+
+    .channel-card p {
+      color: var(--cinza);
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       APOIADOR
+    ========================= */
+
+    .supporter {
+      background: #f8fbfc;
+      color: var(--texto);
+      text-align: center;
+      border-top: 1px solid var(--borda);
+      border-bottom: 1px solid var(--borda);
+    }
+
+    .supporter h2 {
+      color: var(--azul);
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .supporter h2 span {
+      color: #d5a000;
+    }
+
+    .supporter p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      font-size: 18px;
+      color: var(--cinza);
+    }
+
+    /* =========================
+       FINAL
+    ========================= */
+
+    .final-section {
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .final-section h2 {
+      color: var(--azul);
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .final-section p {
+      max-width: 750px;
+      margin: auto;
+      color: var(--cinza);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #eef5f7;
+      color: var(--cinza);
+      text-align: center;
+      padding: 25px 15px;
+      border-top: 1px solid var(--borda);
+    }
+
+    footer span {
+      color: #c39500;
+      font-weight: bold;
+    }
+
+    /* =========================
+       BOTÃO TOPO
+    ========================= */
+
+    .top-button {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--amarelo);
+      color: #34454f;
+      text-decoration: none;
+      border-radius: 50%;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,.15);
+      z-index: 999;
+    }
+
+    .top-button:hover {
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .hero-content {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-images img {
+        height: 350px;
+      }
+
+      .profiles {
+        grid-template-columns: 1fr;
+      }
+
+      .channels {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      video {
+        height: 350px;
+      }
+    }
+
+    /* =========================
+       CELULAR
+    ========================= */
+
+    @media (max-width: 650px) {
+
+      header {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .logo {
+        font-size: 23px;
+      }
+
+      nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 45px 5%;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+      }
+
+      .hero-text p {
+        font-size: 17px;
+      }
+
+      .hero-buttons {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .hero-images {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-images img {
+        height: auto;
+        max-height: 500px;
+      }
+
+      section {
+        padding: 50px 5%;
+      }
+
+      .section-title h2 {
+        font-size: 29px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-card img {
+        height: auto;
+        max-height: 500px;
+      }
+
+      .channels {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-card {
+        padding: 24px 20px;
+      }
+
+      video {
+        height: 230px;
+      }
+
+      .supporter h2 {
+        font-size: 29px;
+      }
+    }
+
+    /* =========================
+       CELULARES PEQUENOS
+    ========================= */
+
+    @media (max-width: 380px) {
+
+      .hero-text h1 {
+        font-size: 31px;
+      }
+
+      nav {
+        gap: 8px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      video {
+        height: 210px;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body id="inicio">
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="logo">
+      Aline <span>&</span> Rogério
+    </div>
+
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#video">Vídeo</a>
+      <a href="#perfis">Projetos</a>
+      <a href="#galeria">Fotos</a>
+      <a href="#canais">Canais</a>
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-text">
+
+        <h1>
+          Aline <span>&</span> Rogério
+        </h1>
+
+        <p>
+          Informação, participação e compromisso
+          com as pessoas, os bairros e o
+          desenvolvimento da comunidade.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#perfis" class="btn btn-yellow">
+            Conheça as propostas
+          </a>
+
+          <a href="#canais" class="btn btn-white">
+            Acompanhe os canais
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-images">
+
+        <img src="alii.jpg" alt="Aline">
+
+        <img src="ricardo.jpg" alt="Rogério">
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAIXA -->
+  <div class="strip">
+    Informação • Participação • Comunidade
+  </div>
+
+
+  <!-- VIDEO -->
+  <section id="video" class="video-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Confira o vídeo</h2>
+
+        <p>
+          Conheça mais sobre Aline e Rogério e acompanhe
+          as informações apresentadas.
+        </p>
+
+      </div>
+
+      <div class="video-box">
+
+        <video controls playsinline>
+
+          <source src="videoric.mp4" type="video/mp4">
+
+          Seu navegador não suporta a reprodução de vídeos.
+
+        </video>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PERFIS -->
+  <section id="perfis">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Conheça os temas e projetos</h2>
+
+        <p>
+          Informações sobre áreas importantes para a comunidade
+          e para a melhoria da qualidade de vida.
+        </p>
+
+      </div>
+
+
+      <div class="profiles">
+
+
+        <!-- ALINE -->
+
+        <div class="profile-card">
+
+         <h3>
+  Aline Teixeira — Mulheres, Direitos e Oportunidades
+</h3>
+
+          <h4>
+            Proteção e Valorização das Mulheres
+          </h4>
+
+          <p>
+            Fortalecer os direitos das mulheres significa ampliar
+            oportunidades, segurança, respeito, autonomia e dignidade.
+            A informação e a participação são importantes para combater
+            a violência, garantir direitos e dar mais voz às mulheres
+            dentro da comunidade.
+          </p>
+
+          <ul class="topics">
+
+            <li>Defesa dos direitos das mulheres</li>
+
+            <li>Combate à violência contra a mulher</li>
+
+            <li>Segurança e proteção</li>
+
+            <li>Autonomia e oportunidades</li>
+
+            <li>Respeito e igualdade</li>
+
+            <li>Participação das mulheres</li>
+
+          </ul>
+
+          <p class="closing">
+            Valorizar as mulheres é contribuir para uma comunidade
+            mais justa, segura e com mais oportunidades para todos.
+          </p>
+
+        </div>
+
+
+        <!-- ROGÉRIO -->
+
+        <div class="profile-card">
+
+          <h3>
+  Rogério Franco — Saúde, Segurança, Infraestrutura e Trabalho
+</h3>
+
+          <h4>
+            Cuidar da cidade é cuidar das pessoas
+          </h4>
+
+          <p>
+            As necessidades da população passam por áreas essenciais
+            como saúde, segurança, infraestrutura e trabalho.
+            Melhorar os serviços, cuidar dos bairros, buscar melhorias
+            urbanas e ampliar oportunidades são pontos importantes
+            para o desenvolvimento da comunidade.
+          </p>
+
+          <ul class="topics">
+
+            <li>Saúde e atendimento à população</li>
+
+            <li>Segurança nos bairros</li>
+
+            <li>Infraestrutura e melhorias urbanas</li>
+
+            <li>Trabalho e geração de oportunidades</li>
+
+            <li>Desenvolvimento dos bairros</li>
+
+            <li>Qualidade de vida</li>
+
+          </ul>
+
+          <p class="closing">
+            Ouvir as necessidades da população e buscar soluções
+            para os problemas do dia a dia é fundamental para
+            construir uma cidade melhor.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GALERIA -->
+
+  <section id="galeria" class="gallery-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Galeria</h2>
+
+        <p>
+          Acompanhe imagens e momentos relacionados ao trabalho
+          e à participação na comunidade.
+        </p>
+
+      </div>
+
+
+      <div class="gallery">
+
+        <div class="gallery-card">
+
+          <img
+            src="materialal.jpg"
+            alt="Aline"
+          >
+
+        </div>
+
+
+        <div class="gallery-card">
+
+          <img
+            src="materiaric.jpg"
+            alt="Rogério"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CANAIS -->
+
+  <section id="canais" class="channels-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Acompanhe os canais</h2>
+
+        <p>
+          Siga os perfis para acompanhar informações,
+          novidades e conteúdos.
+        </p>
+
+      </div>
+
+
+      <div class="channels">
+
+
+        <!-- ALINE -->
+
+        <div class="channel-card">
+
+          <h3>Aline Teixeira</h3>
+
+          <p>
+            Acompanhe o perfil oficial e veja as novidades.
+          </p>
+
+          <a
+            href="https://www.instagram.com/alineteixeira.oficial?stkn=MTh3eW4zZThsamIzaA=="
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-yellow"
+          >
+            Instagram
+          </a>
+
+        </div>
+
+
+        <!-- ROGÉRIO -->
+
+        <div class="channel-card">
+
+          <h3>Rogério Franco</h3>
+
+          <p>
+            Acompanhe o perfil e confira os conteúdos.
+          </p>
+
+          <a
+            href="https://www.instagram.com/rogeriofranco_sp?stkn=djdqMGp2ZjI3ZTl5"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-yellow"
+          >
+            Instagram
+          </a>
+
+        </div>
+
+
+        <!-- PAULO -->
+
+        <div class="channel-card">
+
+          <h3>Paulo Trindade</h3>
+
+          <p>
+            Acompanhe também o canal e os conteúdos publicados.
+          </p>
+
+          <a
+            href="https://www.instagram.com/paulo.trindade.5458?stkn=YXFldDg3Z2hxdXZ2"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-yellow"
+          >
+            Acessar canal
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- APOIADOR -->
+
+  <section class="supporter">
+
+    <div class="container">
+
+      <h2>
+        Apoio e participação com
+        <span>Aline Teixeira</span>
+      </h2>
+
+      <p>
+        Acompanhe o canal de Aline Teixeira e fique por dentro
+        dos conteúdos e informações compartilhados.
+      </p>
+
+      <a
+        href="https://youtube.com/@alineteixeira.oficial?si=18xVXHR9ubfmkD9e"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-yellow"
+      >
+        Acessar canal da Aline
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL -->
+
+  <section class="final-section">
+
+    <div class="container">
+
+      <h2>
+        Informação também é participação
+      </h2>
+
+      <p>
+        Conheça os temas, acompanhe os canais e participe
+        das discussões sobre o futuro da comunidade.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 <span>Aline & Rogério</span> —
+      Informação • Participação • Comunidade
+    </p>
+
+  </footer>
+
+
+  <!-- VOLTAR AO TOPO -->
+
+  <a
+    href="#inicio"
+    class="top-button"
+    aria-label="Voltar ao início"
+  >
+    ↑
+  </a>
+
+</body>
+</html>
